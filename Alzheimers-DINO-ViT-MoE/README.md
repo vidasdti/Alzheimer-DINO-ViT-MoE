@@ -34,7 +34,7 @@ The framework performs **5-Fold Stratified Cross Validation**, evaluates the bes
 # Workflow
 
 <p align="center">
-<img src="plots/images/workflow.png" width="900">
+<img src="images/workflow.png" width="900">
 </p>
 
 
@@ -217,7 +217,7 @@ python plot/plot_roc.py
 ## Confusion Matrices (5-Fold Cross Validation)
 
 <p align="center">
-<img src="plots/images/confusion_matrices.png" width="900">
+<img src="images/confusion_matrices.png" width="900">
 </p>
 
 ---
@@ -227,25 +227,25 @@ python plot/plot_roc.py
 ## Accuracy
 
 <p align="center">
-<img src="plots/images/AccCurve.png" width="700">
+<img src="images/AccCurve.png" width="700">
 </p>
 
 ## Loss
 
 <p align="center">
-<img src="plots/images/LossCurve.png" width="700">
+<img src="images/LossCurve.png" width="700">
 </p>
 
 ## F1-score
 
 <p align="center">
-<img src="plots/images/F1Curve.png" width="700">
+<img src="images/F1Curve.png" width="700">
 </p>
 
 ## ROC Curve
 
 <p align="center">
-<img src="plots/images/roc_curve.png" width="700">
+<img src="images/roc_curve.png" width="700">
 </p>
 
 ---
