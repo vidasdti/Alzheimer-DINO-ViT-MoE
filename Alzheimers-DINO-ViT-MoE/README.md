@@ -1,8 +1,11 @@
 # Alzheimer's Disease Stage Classification using DINO Vision Transformer and Mixture-of-Experts
 
 > **Official implementation of the accompanying research paper**
+> 
 > **Authors:** Vida Sadati, Behnam Mohammad Hasani Zade, Najme Mansouri
+> 
 > **Affiliation:** Department of Computer Science, Shahid Bahonar University of Kerman, Kerman, Iran
+> 
 > **Corresponding author:** Vida Sadati (vidasadati@gmail.com)
 
 
