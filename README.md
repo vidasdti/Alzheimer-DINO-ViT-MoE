@@ -32,15 +32,6 @@ The framework performs **5-Fold Stratified Cross Validation**, evaluates the bes
 
 ---
 
-# Workflow
-
-<p align="center">
-<img src="images/workflow.png" width="600">
-</p>
-
-
----
-
 # Features
 
 - DINO Vision Transformer backbone
