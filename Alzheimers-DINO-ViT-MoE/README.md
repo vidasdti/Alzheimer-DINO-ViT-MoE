@@ -1,12 +1,14 @@
 # Alzheimer's Disease Stage Classification using DINO Vision Transformer and Mixture-of-Experts
 
-**Official implementation of the accompanying research paper**
-
-**Vida Sadati**<sup>1,*</sup>, **Behnam Mohammad Hasani Zade**<sup>2</sup>, **Najme Mansouri**<sup>3</sup>
-
-<sup>1,2,3</sup> Department of Computer Science, Shahid Bahonar University of Kerman, Kerman, Iran
-
-*Corresponding author:* **Vida Sadati** (vidasadati@gmail.com)
+> **Official implementation of the accompanying research paper**
+>
+> **Authors:** Vida Sadati, Behnam Mohammad Hasani Zade, Najme Mansouri
+>
+> **Affiliation:** Department of Computer Science, Shahid Bahonar University of Kerman, Kerman, Iran
+>
+> **Corresponding author:** Vida Sadati (vidasadati@gmail.com)
+>
+> **Status:** Manuscript under review
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)]()
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red.svg)]()
@@ -112,6 +114,25 @@ Plot Scripts
 ├── output/
 └── images/
 ```
+
+---
+# Dataset
+
+This project uses the **OriginalDataset** from the publicly available **Augmented Alzheimer MRI Dataset** available on Kaggle.
+
+Dataset:
+https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset?select=OriginalDataset
+
+The original dataset contains four classes:
+
+- NonDemented
+- VeryMildDemented
+- MildDemented
+- ModerateDemented
+
+Only the **OriginalDataset** was used in this work. The `preprocessing.py` script automatically preprocesses the images, preserves the aspect ratio using centered padding, resizes them to **224×224**, and creates the train/test split.
+
+> **Note:** The dataset is **not included** in this repository due to licensing and size limitations. Please download it from Kaggle and place it inside the `raw_dataset/` directory before running `preprocessing.py`.
 
 ---
 
