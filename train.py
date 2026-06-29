@@ -68,8 +68,8 @@ def main():
     set_seed(42)
     create_output_dirs()
 
-    print(f"🚀 Starting {NUM_FOLDS}-Fold Cross Validation with DINO+ViT+MoE")
-    print("🔍 Loading DINO ViT (timm)...")
+    print(f" Starting {NUM_FOLDS}-Fold Cross Validation with DINO+ViT+MoE")
+    print(" Loading DINO ViT (timm)...")
 
     train_root = os.path.join(PROCESSED_DATASET, "train")
     paths, labels = collect_dataset(train_root, CLASS_NAMES, LABEL_MAP)
@@ -125,7 +125,7 @@ def main():
         ckpt_path = os.path.join(OUTPUT_DIR, f"checkpoint_fold{fold}.pth")
 
         if os.path.exists(ckpt_path):
-            print(f"🔁 Resuming Fold {fold}...")
+            print(f" Resuming Fold {fold}...")
 
             checkpoint = torch.load(ckpt_path, map_location=device)
 
@@ -138,7 +138,7 @@ def main():
 
         for epoch in range(start_epoch, EPOCHS + 1):
             t0 = time.time()
-            print(f"\n📚 Epoch {epoch}/{EPOCHS}")
+            print(f"\n Epoch {epoch}/{EPOCHS}")
             train_loss, train_acc, train_f1 = train_epoch(model, train_loader, optimizer, criterion, scaler, device, GRAD_CLIP)
             elapsed = time.time() - t0
             print(f" Train Mixup -> Loss: {train_loss:.4f}, Acc: {train_acc:.4f}, Macro-F1: {train_f1:.4f} (time: {elapsed:.1f}s)")
@@ -183,12 +183,12 @@ def main():
                 best_model_path = os.path.join(OUTPUT_DIR, f"best_dinovit_moe_fold{fold}.pth")
                 torch.save(model.state_dict(), best_model_path)
                 cm_path = save_confusion(y_true, y_pred, fold, CLASS_NAMES, os.path.join(OUTPUT_DIR, "confusionsDINO"))
-                print(f"✅ Best model saved: {best_model_path}")
+                print(f" Best model saved: {best_model_path}")
                 print(f"   Confusion saved: {cm_path}")
             else:
                 no_improve += 1
                 if no_improve >= PATIENCE:
-                    print("🛑 Early stopping.")
+                    print(" Early stopping.")
                     break
 
             scheduler.step()
@@ -211,7 +211,7 @@ def main():
         gc.collect()
 
     # final summary
-    print("\n📊 Cross Validation Results")
+    print("\n Cross Validation Results")
     for i, acc in enumerate(fold_results, 1):
         print(f"Fold {i}: Best Val Acc = {acc:.4f}")
     mean_acc, ci = ci_95(fold_results)
