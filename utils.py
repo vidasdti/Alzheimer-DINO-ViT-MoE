@@ -31,7 +31,7 @@ def save_confusion(y_true, y_pred, fold, class_names, out_dir):
 # Summary of folders
 # ============================================================
 def summarize_folders(root_train, class_names):
-    print("🔎 Summary of folders and file counts:")
+    print(" Summary of folders and file counts:")
 
     summary = {}
     total = 0
@@ -48,7 +48,7 @@ def summarize_folders(root_train, class_names):
         total += cnt
         print(f"  - {cls}: train={cnt}")
 
-    print(f"🧮 Total train files: {total}")
+    print(f" Total train files: {total}")
 
     return summary
 
@@ -99,7 +99,7 @@ def train_epoch(model, loader, optimizer, criterion, scaler, device, grad_clip=N
     correct_weighted = 0.0
     y_true_for_f1, y_pred_for_f1 = [], []
 
-    for x, y in tqdm(loader, desc="🔁 Training", ncols=120):
+    for x, y in tqdm(loader, desc=" Training", ncols=120):
         x = x.to(device)
         y = y.to(device)
         optimizer.zero_grad()
