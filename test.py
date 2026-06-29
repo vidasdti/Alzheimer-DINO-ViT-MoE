@@ -63,7 +63,7 @@ def plot_confusion_matrix(cm, class_names, save_path, title="Confusion Matrix"):
 # -------------------------
 def run_test():
 
-    print("\n🚀 FINAL TEST ON SEPARATE HELD-OUT TEST SET")
+    print("\n FINAL TEST ON SEPARATE HELD-OUT TEST SET")
 
     test_root = os.path.join(PROCESSED_DATASET, "test")
 
@@ -83,7 +83,6 @@ def run_test():
 
     criterion = LabelSmoothingCrossEntropy(0.05)
 
-    # خروجی کلی تست
     test_out_dir = os.path.join(OUTPUT_DIR, "test_results")
     cm_out_dir = os.path.join(test_out_dir, "confusion_matrices")
     os.makedirs(cm_out_dir, exist_ok=True)
@@ -147,7 +146,7 @@ def run_test():
             title=f"Confusion Matrix - Fold {fold}"
         )
 
-        print(f"📊 Confusion matrix saved: {save_path}")
+        print(f" Confusion matrix saved: {save_path}")
         print("-" * 60)
         
         all_fold_results.append([acc, f1])
