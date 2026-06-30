@@ -256,7 +256,7 @@ python plot/plot_roc.py
 ## ROC Curve
 
 <p align="center">
-<img src="images/roc_curve.png" width="600">
+<img src="images/roc_curve.png" width="500">
 </p>
 
 ---
